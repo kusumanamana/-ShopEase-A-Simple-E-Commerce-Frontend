@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Showcase</title>
+
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <style>
+    a {
+      color: rgba(0, 0, 0);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .card {
+      border: none;
+      background-color: rgba(240, 234, 236, 0.727);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+
+  <script>
+    function showwomen() {
+      const cards = Array.from(document.querySelectorAll(".card"));
+      cards.map(card => {
+        if (card.dataset.category === "women") {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    function showkid() {
+      const cards = Array.from(document.querySelectorAll(".card"));
+      cards.map(card => {
+        if (card.dataset.category === "kids") {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    function showbags() {
+      const cards = Array.from(document.querySelectorAll(".card"));
+      cards.map(card => {
+        if (card.dataset.category === "bags") {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    function showall() {
+      const cards = Array.from(document.querySelectorAll(".card"));
+      cards.map(card => {
+        card.style.display = "block";
+      });
+    }
+  </script>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <a href="../trialfile/example.html">
+            <h1 class="p-2 m-2 text-bg-secondary">CozzyStore</h1>
+        </a>
+    </header>
+  <header style="height: 90px;" class="mt-4 p-4">
+    <a href="#" class="me-3" onclick="showall()">All products</a>
+    <a href="#" class="me-3" id="women" onclick="showwomen()">Women</a>
+    <a href="#" class="me-3" onclick="showbags()">Bags</a>
+    <a href="#" class="me-3" id="kids" onclick="showkid()">Kids</a>
+  </header>
+
+  <main class="d-flex flex-wrap">
+
+    <div class="card w-20 me-4 mb-3" data-category="women" 
+         data-desc="Soft cotton material perfect for summer wear."
+         data-sizes="S,M,L" data-colors="Red,Blue,Green">
+      <div class="card-header">
+        <img src="../public/images/women-2.jpg" class="card-img-top" width="100%" height="200">
+      </div>
+      <div class="card-body">
+        <p>Ruffle t-shirt</p>
+        <p>$16.64</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary fullview-btn">Full view</button>
+      </div>
+    </div>
+
+    <div class="card w-20 me-4 mb-3" data-category="women" 
+         data-desc="Trendy cotton wear with smooth texture."
+         data-sizes="S,M,L" data-colors="Pink,Black,White">
+      <div class="card-header">
+        <img src="../public/images/w1.jpg" width="100%" height="200">
+      </div>
+      <div class="card-body">
+        <p>Casual Top</p>
+        <p>$20.10</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary fullview-btn">Full view</button>
+      </div>
+    </div>
+
+    <div class="card w-20 me-4 mb-3" data-category="women"
+         data-desc="Lightweight and perfect for daily use."
+         data-sizes="S,M,L" data-colors="Yellow,White,Green">
+      <div class="card-header">
+        <img src="../public/images/women-3.jpg" width="100%" height="200">
+      </div>
+      <div class="card-body">
+        <p>Summer Top</p>
+        <p>$18.50</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary fullview-btn">Full view</button>
+      </div>
+    </div>
+
+    <div class="card w-20 me-4 mb-3" data-category="kids"
+         data-desc="Soft fabric perfect for kids' sensitive skin."
+         data-sizes="S,M,L" data-colors="Blue,Green,Red">
+      <div class="card-header">
+        <img src="../public/images/kid-1.jpg" width="100%" height="200">
+      </div>
+      <div class="card-body">
+        <p>Kids T-shirt</p>
+        <p>$14.99</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary fullview-btn">Full view</button>
+      </div>
+    </div>
+            <div class="card w-20 me-4 mb-3" data-category="kids">
+            <div class="card-header">
+                <img src="../public/images/kid-2.jpg" width="100%" height="200">
+            </div>
+            <div class="card-body">
+                <p >Ruffle t-shirt</p>
+                <p >$16.64</p>
+            </div>    
+            <div class="card-footer">
+            <button class="btn btn-primary">Full view</button>
+            </div>    
+        </div>
+        <div class="card w-20 me-4 mb-3" data-category="kids">
+            <div class="card-header">
+                <img src="../public/images/kid-3.jpg" width="100%" height="200">
+            </div>
+            <div class="card-body">
+                <p >Ruffle t-shirt</p>
+                <p >$16.64</p>
+            </div>    
+            <div class="card-footer">
+            <button class="btn btn-primary">Full view</button>
+            </div>   
+        </div>
+        <div class="card w-20 me-4 mb-3">
+            <div class="card-header">
+                <img src="../public/images/lady-1.jpg" width="100%" height="200">
+            </div>
+            <div class="card-body">
+                <p >Ruffle t-shirt</p>
+                <p >$16.64</p>
+            </div> 
+            <div class="card-footer">
+            <button class="btn btn-primary">Full view</button>
+            </div>       
+        </div>
+        <div class="card w-20 me-4 mb-3">
+            <div class="card-header">
+                <img src="../public/images/lady-2.jpg" width="100%" height="200">
+            </div>
+            <div class="card-body">
+                <p >Ruffle t-shirt</p>
+                <p >$16.64</p>
+            </div>   
+            <div class="card-footer">
+            <button class="btn btn-primary">Full view</button>
+            </div>     
+        </div>
+            <div class="card w-20 me-4 mb-3" data-category="bags">
+            <div class="card-header">
+                <img src="../public/images/bag-1.jpg" width="100%" height="200">
+            </div>
+            <div class="card-body">
+                <p >Ruffle t-shirt</p>
+                <p >$16.64</p>
+            </div>        
+            <div class="card-footer">
+            <button class="btn btn-primary">Full view</button>
+            </div>
+        </div>
+        <div class="card w-20 me-4 mb-3" data-category="bags">
+            <div class="card-header">
+                <img src="../public/images/bag-2.jpg" width="100%" height="200">
+            </div>
+            <div class="card-body">
+                <p >Ruffle t-shirt</p>
+                <p >$16.64</p>
+            </div>   
+            <div class="card-footer">
+            <button class="btn btn-primary">Full view</button>
+            </div>     
+        </div>
+        <div class="card w-20 me-4 mb-3" data-category="bags">
+            <div class="card-header">
+                <img src="../public/images/bag-3.jpg" width="100%" height="200">
+            </div>
+            <div class="card-body">
+                <p >Ruffle t-shirt</p>
+                <p >$16.64</p>
+            </div>   
+            <div class="card-footer">
+            <button class="btn btn-primary">Full view</button>
+            </div>     
+        </div>
+        <div class="card w-20 me-4 mb-3" data-category="bags">
+            <div class="card-header">
+                <img src="../public/images/bag-4.jpg" width="100%" height="200">
+            </div>
+            <div class="card-body">
+                <p >Ruffle t-shirt</p>
+                <p >$16.64</p>
+            </div>      
+            <div class="card-footer">
+            <button class="btn btn-primary">Full view</button>
+            </div>  
+        </div>
+  </main>
+
+  <!-- 🩵 Modal Section -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body d-flex align-items-start">
+          <img id="productImg" src="" alt="product image" class="me-4 rounded" width="300" height="300">
+          <div>
+            <h4 id="productPrice" class="text-success"></h4>
+            <p id="productDesc"></p>
+
+            <div class="mt-3">
+              <label>Size:</label>
+              <select id="productSizes" class="form-select w-50"></select>
+            </div>
+            <div class="mt-3">
+              <label>Color:</label>
+              <select id="productColors" class="form-select w-50"></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+  <script>
+    // Modal functionality
+    const buttons = document.querySelectorAll(".fullview-btn");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const card = e.target.closest(".card");
+
+        const imgSrc = card.querySelector("img").src;
+        const title = card.querySelector(".card-body p:nth-child(1)").textContent;
+        const price = card.querySelector(".card-body p:nth-child(2)").textContent;
+        const desc = card.dataset.desc || "Product details not available.";
+        const sizes = (card.dataset.sizes || "S,M,L").split(",");
+        const colors = (card.dataset.colors || "Red,Blue,Green").split(",");
+
+        document.getElementById("productImg").src = imgSrc;
+        document.getElementById("productTitle").textContent = title;
+        document.getElementById("productPrice").textContent = price;
+        document.getElementById("productDesc").textContent = desc;
+
+        const sizeSelect = document.getElementById("productSizes");
+        const colorSelect = document.getElementById("productColors");
+        sizeSelect.innerHTML = "";
+        colorSelect.innerHTML = "";
+
+        sizes.forEach(size => {
+          const opt = document.createElement("option");
+          opt.textContent = size;
+          sizeSelect.appendChild(opt);
+        });
+
+        colors.forEach(color => {
+          const opt = document.createElement("option");
+          opt.textContent = color;
+          colorSelect.appendChild(opt);
+        });
+
+        const modal = new bootstrap.Modal(document.getElementById('productModal'));
+        modal.show();
+      });
+    });
+  </script>
+</body>
+</html>
